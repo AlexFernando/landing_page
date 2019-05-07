@@ -1,0 +1,399 @@
+@import "bourbon";
+@import url('https://fonts.googleapis.com/css?family=Exo:700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+.container2 {
+    position: relative;
+    background: #f1f1f1;
+    height: 500px;
+    width: 100%;
+  }
+
+
+  @media(min-width:768px) {
+    .container2 {
+      position: relative;
+      background: #f1f1f1;
+      height: 800px;
+      width: 100%;
+    }
+  }
+.myflex {
+    display: flex;
+  }
+  
+.bgimage1 {
+    background: url('../images/mp_2.jpg')no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.bgimage2 {
+    background: url('../images/choquequirao.jpg')no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+/*
+.bgimage1, .bgimage2 {
+  -webkit-animation:forest-night 10s 2s infinite;
+  animation:forest-night 10s 2s infinite;
+}
+
+@-webkit-keyframes forest-night {
+ 
+  30% {
+    filter:hue-rotate(0deg) brightness(50%);
+  }
+  40% {
+    filter:hue-rotate(0deg) brightness(100%);
+  }
+  70% {
+    filter:hue-rotate(0deg) brightness(2);
+  }
+  100% {
+    filter:hue-rotate(220deg) brightness(50%);
+  }
+
+}
+@keyframes forest-night {
+
+  30% {
+    filter:hue-rotate(0deg) brightness(50%);
+  }
+  50% {
+    filter:hue-rotate(0deg) brightness(100%);
+  }
+  100% {
+    filter:hue-rotate(220deg) brightness(50%);
+  }
+}
+*/
+.izq-bg, .der-bg {
+    width: 50%;
+    transition: .25s ease;
+}
+.izq-bg, .der-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    transition: all 1.5s ease-out;
+  }
+
+  .izq-bg {
+    left: 0;
+  }
+  .der-bg {
+    background-position: right;
+    right: 0;
+  }
+  .der-bg:before {
+    content: "OR";
+    font-weight: bold;
+    position: absolute;
+    background: black;
+    color: white;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    top:  300px;
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+  }
+  .der-bg:after {
+    content: " ";
+    height: 280px;
+    width: 1px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 150px;
+  }
+  
+  .izq-bg:hover {
+    width: 100%;
+  }
+  .izq-bg:hover + .der-bg {
+    width: 0%;
+    transition:  width 3s ease-out;
+  }
+
+  .der-bg:hover {
+    width: 100%;
+    transition: width 3s ease-out;
+  }
+
+  .der-bg:hover + .izq-bg {
+    width: 0%;
+  }
+
+  /*background titles*/
+  .bg-title, .bg-title2 {
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1; 
+    backdrop-filter: blur(10px);  
+    -webkit-backdrop-filter: blur(10px);
+    margin: 6rem 0rem;
+  }
+
+  @media(min-width:768px){
+    .bg-title, .bg-title2 {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      font-family: sans-serif;
+      text-align: center;
+      line-height: 1; 
+      backdrop-filter: blur(10px);  
+      -webkit-backdrop-filter: blur(10px);
+      max-width:100%;
+      max-height: 100%;
+    }
+  }
+
+
+  .bg-title h2, .bg-title2 h2 {
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 1rem .5rem;
+  }
+  .bg-title h3, .bg-title2 h3 {
+    margin: 1rem 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: rgba(255, 166, 0, 0.822);
+    padding: 1rem 1rem;
+  }
+  .bg-title p, .bg-title2 p {
+    margin: 1rem 1rem; 
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: rgba(124, 16, 124, 0.534);
+    padding: 1rem 1rem;
+  }
+
+  .contact-home {
+    text-decoration: none;
+    padding: .8rem .8rem;
+    background-color: rgba(0, 0, 0, 0.781);
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Raleway, serif; 
+    transition: background-color .5s ease;
+    margin: 3rem 0 0 0;
+}
+
+  @media(min-width: 768px) {
+    .bg-title, .bg-title2 {
+      margin: 10rem; 
+    }
+
+  .bg-title h2, .bg-title2 h2 {
+    margin: 2rem 0rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 1rem 2rem;
+  }
+  .bg-title h3, .bg-title2 h3 {
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: rgba(255, 166, 0, 0.822);
+    padding: 1rem 1rem;
+  }
+  .bg-title p, .bg-title2 p {
+    margin: 2rem auto; 
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    background-color: rgba(124, 16, 124, 0.534);
+    padding: 1rem 1rem;
+  }
+  .contact-home {
+    text-decoration: none;
+    padding: 1.2rem 1.6rem;
+    background-color: rgba(0, 0, 0, 0.781);
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Raleway, serif; 
+    transition: background-color .5s ease;
+    margin: 6rem 0 0 0;
+}
+
+}
+
+
+@keyframes slideInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-300px); }
+  100% {
+      opacity: 1;
+      transform: translateX(0); } 
+}
+@keyframes slideInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(300px); }
+  100% {
+      opacity: 1;
+      transform: translateX(0); } 
+}
+
+
+.waypoint {
+      opacity: 0; 
+  }
+  .animated.slide-in-left {
+    animation: slideInLeft .75s ease both; 
+}
+.animated.slide-in-right {
+    animation: slideInRight .75s ease both;
+}
+
+
+/*card starts*/
+
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  -webkit-transform: perspective(900px);
+  -webkit-transform-style: preserve-3d;
+  margin-top: 7rem;
+}
+
+
+@media(min-width:768px){
+  .container {
+    flex-direction: row;
+  }
+}
+.cards-tours h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Exo', sans-serif;
+}
+
+.card1 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+  transition:.6s;
+  transform: rotatex(45deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+  text-align: center;
+}
+.card1:hover{
+  transform: rotatex(0deg);
+  transform: rotatez(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card1 img{
+  transform: translateY(15px);
+  width:100%;
+  height:160px;
+}
+h3{
+  font-size:25px;
+  font-family: 'Abel', sans-serif;
+  color:rgb(255,255,255);
+  text-shadow: 0 0 2px rgb(255,255,255);
+  transform: translateY(40px);
+}
+
+
+
+p{
+  font-family: 'Abel', sans-serif;
+  color: white;
+  text-align: center;
+  transform: translateY(50px);
+}
+
+
+.card2 {
+  width: 250px;
+  height: 350px;
+  background: linear-gradient(rgb(93,94,170),rgb(93,66,103));
+  animation: animate 1s linear infinite;
+  transition:.6s;
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.card2:hover{
+   transform: rotatex(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card2 img{
+  transform: translateY(15px);
+  width:180px;
+  height:150px;
+}
+.card3 {
+  width: 250px;
+  height: 350px;
+  background: linear-gradient(#ff5252, #b33939);
+  transition:.6s;
+  transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.card3:hover{
+   transform: rotatex(0deg);
+  transition:.6s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.card3 img{
+  transform: translateY(15px);
+  width:200px;
+  height:120px;
+}
+.footer{
+  position: absolute;
+  top: 500px;
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+.footer h2{
+  font-size:18px;
+  font-family: 'Exo', sans-serif;
+  
+}
+
+/*cards ends*/
